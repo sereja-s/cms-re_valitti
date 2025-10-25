@@ -8,9 +8,9 @@
   gap: 2rem;
 }
 .skill {
-  border: 0.0625rem solid rgba(218, 197, 167, 0.15);
+  border: 0.0625rem solid rgba(218, 197, 167, 0.35);
   border-radius: 0.125rem;
-  background-color: rgba(218, 197, 167, 0.05);
+  background-color: rgba(218, 197, 167, 0.15);
   flex: 1 1 21.875rem;
 }
 .skill > * {
@@ -26,13 +26,13 @@
   margin-bottom: 0.25rem;
 }
 .skill__title {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Gilroy";
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.3;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(218, 197, 167, 0.8);
+  color: rgba(243, 145, 8, 0.8);
   transition: all 0.5s;
 }
 .skill__text {
@@ -132,6 +132,11 @@
   gap: 1.25rem 2.1875rem;
   flex-wrap: wrap;
 }
+
+.clients__item {
+	max-width: 7em;
+}
+
 .selected-work__header {
   display: flex;
   flex-wrap: wrap;
@@ -140,13 +145,13 @@
   gap: 0.9375rem;
 }
 .selected-work__title {
-  color: rgba(218, 197, 167, 0.8);
-  font-family: "Satoshi", sans-serif;
+  color:  rgb(255, 150, 3);;
+  /* font-family: "Satoshi", sans-serif; */
 }
 .selected-work__title {
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.1;
-  padding: 0rem 2rem 2rem 2rem;
+  padding: 1;
 }
 .selected-work__title span {
   font-family: "Gambetta", serif;
@@ -440,7 +445,7 @@
 }
 @media (min-width: 20em) and (max-width: 89.375em) {
   .skills {
-    margin-bottom: clamp( 3.75rem , 1.89414414414375rem  +  9.2792792793vw , 10.1875rem );
+    margin-bottom: clamp( 3.75rem , 1.89414414414375rem  +  9.2792792793vw , 5.1875rem );
   }
   .skill {
     padding: clamp( 0.9375rem , 0.34290540540625rem  +  2.972972973vw , 3rem );
@@ -463,17 +468,17 @@
   .page__hero {
     padding-block: clamp( 0.9375rem , 0.30686936936875rem  +  3.1531531532vw , 3.125rem );
   }
-  .page__clients {
+  /* .page__clients {
     padding-top: clamp( 1.875rem , 0.10923423423125rem  +  8.8288288288vw , 8rem );
-  }
+  } */
   .page__clients {
-    padding-bottom: clamp( 0.9375rem , -0.23367117116875rem  +  5.8558558559vw , 5rem );
+    padding-bottom: clamp( 1.9375rem , -0.23367117116875rem  +  5.8558558559vw , 5rem );
   }
   .page__process {
     padding-bottom: clamp( 0.9375rem , -1.6751126126125rem  +  13.0630630631vw , 10rem );
   }
   .selected-work {
-    padding-bottom: clamp( 3.75rem , 1.9481981982rem  +  9.009009009vw , 10rem );
+    padding-bottom: clamp( 3.75rem , 1.9481981982rem  +  9.009009009vw , 7rem );
   }
   .selected-work__header {
     margin-bottom: clamp( 0.9375rem , 0.63119369369375rem  +  1.5315315315vw , 2rem );
