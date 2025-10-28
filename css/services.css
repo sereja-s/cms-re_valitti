@@ -58,9 +58,9 @@
   margin-bottom: 0;
 }
 .item-service__label {
-  text-transform: uppercase;
-  font-family: "Satoshi", sans-serif;
-  font-size: 0.8125rem;
+  /* text-transform: uppercase;
+  font-family: "Satoshi", sans-serif; */
+  font-size: 1.3rem;
   letter-spacing: 0.09375rem;
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -103,7 +103,7 @@
   color: #fff;
 }
 .table-service__row:not(:last-child) td {
-  border-bottom: 0.0625rem solid rgba(218, 197, 167, 0.15);
+  border-bottom: 0.0625rem solid rgba(218, 197, 167, 0.55);
 }
 .table-service__label {
   width: 23.452158%; /* 250/1066 */
@@ -118,7 +118,7 @@
   padding-right: 0.625rem;
 }
 .table-service__content {
-  line-height: 1.8;
+  line-height: 1.5;
 }
 .table-service__text p:not(:last-child) {
   margin-bottom: 0.875rem;

@@ -6,11 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1760286073817"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1760286073817">
-		<link rel="modulepreload" crossorigin="" href="./js/main.min.js?v=1760286073817">
+		<title>Cалон красоты в Донецке Ре Валитти</title>
+		
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/> -->
+		
+		
 		<link rel="stylesheet" crossorigin="" href="./css/main.css">
+		<link rel="stylesheet" crossorigin="" href="./css/swiper.css">
 		<link rel="stylesheet" crossorigin="" href="./css/index.css">
 		<link rel="stylesheet" crossorigin="" href="./css/work2.css">
 	</head>
@@ -21,81 +23,175 @@
 				<div class="header__container">
 					<div class="header__body">
 						<!-- <img src="./assets/img/логотип-мин.jpg" alt="Image" class="header__logo"> -->
-						 <a href="/" class="header__logo" style="font-size: 1.5em; font-weight: 700;">Re Valitti</a>
+						 <a href="/" class="header__logo" style="color:rgb(150, 43, 5); font-size: 1.5em; font-weight: 700;">Ре Валитти</a>
 						<div class="header__menu menu">
 							<nav class="menu__body">
 								<ul class="menu__list">
-									<!-- <li class="menu__item">
-										<a href="services" class="menu__link menu__link--active">Services</a>
-									</li>
+																		
 									<li class="menu__item">
-										<a href="work" class="menu__link">Work</a>
-									</li>
-									<li class="menu__item">
-										<a href="about" class="menu__link">About</a>
-									</li>
-									<li class="menu__item">
-										<a href="blog" class="menu__link">Blog</a>
-									</li>
-									<li class="menu__item">
-										<a href="#" class="menu__link">Pages</a>
-									</li> -->
-									<li class="menu__item">
-										<a href="services.html" class="menu__link">Услуги</a>
+										<a href="#" class="menu__link">Услуги</a>
+										<span class="menu__arrow arrow"></span>
+										<ul class="sub-menu__list">
+											<li>
+												<a href="" class="sub-menu__link">Парикмахер-стилист для леди</a>
+											</li>
+											<li>
+												<a href="" class="sub-menu__link">Парикмахер-стилист для джентельмена</a>
+											</li>
+											<li>
+												<a href="" class="sub-menu__link">Парикмахер-стилист для детей</a>
+											</li>
+											<li>
+												<a href="" class="sub-menu__link">Ногтевой сервис</a>
+											</li>
+											<li>
+												<a href="" class="sub-menu__link">Услуги бровиста</a>
+											</li>
+										</ul>
 									</li>
 									<li class="menu__item">
 										<a href="work.html" class="menu__link">О нас</a>
 									</li>
 									<li class="menu__item">
-										<a href="about.html" class="menu__link">Контакты</a>
+										<a href="services.html" class="menu__link">Контакты</a>
 									</li>
-									<!-- <li class="menu__item">
-										<a href="blog.html" class="menu__link">Blog</a>
-									</li>
-									<li class="menu__item">
-										<a href="contacts.html" class="menu__link">contacts</a>
-									</li>
-									<li class="menu__item">
-										<a href="singlework.html" class="menu__link">singlework</a>
-									</li> -->
+									
 								</ul>
 							</nav>
 						</div>
-						<!--
-<fetch url="@components/layout/menu/menu.json">
-<each loop='item in response'>
-</each>
-</fetch>
--->
+
+
+						<style>
+							.menu__body a.parent {
+								margin: 0 30px 0 0;
+							}
+							.menu__body li{
+								position: relative;
+							}
+							.sub-menu__list a:hover{
+								text-decoration: underline;
+							}
+							.sub-menu__list{
+								display: none;
+								min-width: 255px;
+								position: absolute;
+								left: 0;
+								top: 20px;
+								box-shadow: 0 8px 6px -6px #999;
+								/* background-color: rgba(218, 197, 167, 0.05);
+								backdrop-filter: blur(1.875rem); */
+								padding: 20px 0 0 0;								
+							}
+							.sub-menu__list>li{
+								background-color: rgba(255, 135, 70, 0.85);
+								backdrop-filter: blur(1.875rem);
+																
+							}
+							.sub-menu__link{
+								display: inline-block;
+								color: white;
+								font-size: 1.2rem;
+								font-weight: 500;
+								padding: 5px 10px;
+							}
+							.arrow{
+								display: none;
+								position: absolute;
+								right: 0;
+								top: 12px;
+								width: 0;
+								height: 0;
+								border-top: 10px solid rgba(255, 135, 70);
+								border-right: 10px solid transparent;
+								border-left: 10px solid transparent;
+							}
+							.arrow.active {
+								transform: rotate(180deg);
+							}
+							body.mouse .menu__list>li:hover .sub-menu__list {
+								display: block;
+							}
+							body.touch .sub-menu__list.open {
+								display: block;
+							}
+							body.touch .arrow{
+								display: block;
+							}
+							@media (max-width: 767px) {
+								.sub-menu__list {
+									position: relative;
+									left: 0;
+									top: 0;
+								}
+							}
+							
+						</style>
+
+					
+
 						<a href="contacts" data-fls-button="" class="header__button button button--lite">Позвонить</a>
 						<button type="button" data-fls-menu="" class="icon-menu">
 							<span></span>
 						</button>
 					</div>
 				</div>
-			</header>
-			<!-- @format -->
-			<main class="page page--home">
+			</header>			
+			<main class="page page--home">				
 				<section class="page__hero hero">
 					<div class="hero__container">
-						<div class="hero__picture">
-							<picture>
-								<!-- <source media="(max-width: 600px)" srcset="./assets/img/arik-600.webp" type="image/webp"> -->
-								<img class="hero__image" alt="Hero Image" src="./assets/img/лого-англ-мин.jpg">
-							</picture>
-						</div>
-						<div data-fls-blockhead="" class="hero__blockhead blockhead">
-							<h1 class="blockhead__title blockhead__title--size-160">
-								Центр красоты								
-							</h1>
+						<div style="min-width: 0;"  class="my-swiper">
+	<!-- Slider main container -->
+							<div class="swiper">
+		<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+			<!-- Slides -->					
+								<div class="swiper-slide">
+					             <div class="hero__picture"><picture><img class="hero__image" alt="Hero Image" src="./assets/img/top-section/Бел-мин (2).svg"></picture></div>
+								    <div class="hero__blockhead blockhead">
+							<h2 class="blockhead__title blockhead__title--size-160">
+								Салон красоты в Донецке								
+							</h2>
 							<div class="blockhead__text blockhead__text--size-24">
 								<p>
 									Красота начинается здесь.<br>В Re Valitti мы подчёркиваем индивидуальность, чтобы с первой минуты вы чувствовали себя желанными и особенными. Доверьте свою красоту профессионалам!
 								</p>
 							</div>
-						</div>
+								</div>
+								</div>
+								<div class="swiper-slide">
+					             <div class="hero__picture"><picture><img class="hero__image" alt="Hero Image" src="./assets/img/top-section/Бел-мин (3).svg"></picture></div>
+								    <div class="hero__blockhead blockhead">
+							<h2 class="blockhead__title blockhead__title--size-160">
+								Центр красоты							
+							</h2>
+							<div class="blockhead__text blockhead__text--size-24">
+								<p>
+									Красота начинается здесь.<br>В Re Valitti мы подчёркиваем индивидуальность, чтобы с первой минуты вы чувствовали себя желанными и особенными. Доверьте свою красоту профессионалам!
+								</p>
+							</div>
+								</div>
+								</div>
+								<div class="swiper-slide">
+					             <div class="hero__picture"><picture><img class="hero__image" alt="Hero Image" src="./assets/img/top-section/корчневый-мин (4).svg"></picture></div>
+								    <div class="hero__blockhead blockhead">
+							<h2 class="blockhead__title blockhead__title--size-160">
+								Центр красоты 2							
+							</h2>
+							<div class="blockhead__text blockhead__text--size-24">
+								<p>
+									Красота начинается здесь.<br>В Re Valitti мы подчёркиваем индивидуальность, чтобы с первой минуты вы чувствовали себя желанными и особенными. Доверьте свою красоту профессионалам!
+								</p>
+							</div>
+								</div>
+								</div>
+							</div>	
+
+							</div>
+
+						</div>						
 					</div>
 				</section>
+
 				<div class="page__clients clients">
 					<ul class="clients__container">
 						<li class="clients__item">
@@ -134,17 +230,16 @@
 				<section class="page__selected-work selected-work">
 					<div class="selected-work__container">
 						<div class="selected-work__header">
-							<h2 class="selected-work__title">
-								Наши услуги
-								<!-- <span>Work</span> -->
-							</h2>
+							<h3 class="selected-work__title">
+								Услуги салона красоты 
+								<span>Ре Валитти</span>
+							</h3>
 							<!-- <a href="#" data-fls-button="" class="selected-work__button button button--text button--icon-arrow button--arrow-ru">See All</a> -->
 						</div>
 						<div class="selected-work__items works">
 							<article data-fls-work="" class="item-work">
 								<a href="#" class="item-work__picture">
-									<picture>
-										<!-- <source media="(max-width: 600px)" srcset="./assets/img/work/01-600.webp" type="image/webp"> -->
+									<picture>										
 										<img class="item-work__image" alt="Image" src="./assets/img/work/парикмахер для женщин.jpg">
 									</picture>
 								</a>
@@ -217,9 +312,28 @@
 
 				<section class="social-blog">
 
-					<div class="selected-work__container"><h3 class="selected-work__title selected-work__header">Мы в социальных сетях</h3></div>
+					<div class="selected-work__container">
+						<div data-fls-blockhead="" class="process__blockhead blockhead">
+							<span class="blockhead__label">Доверьте свою красоту профессионалам</span>
+							<h1 class="blockhead__title">
+								Салон красоты в Донецке
+								<span>Ре Валитти</span>
+							</h1>
+							<div class="blockhead__text">
+								<p>
+									Мы обновили наш прайс-лист, чтобы вам было удобно и легко планировать свой визит в центр красоты ReValitti🐾
 
+Здесь вы найдете цены на основные услуги.
+
+Мы всегда используем только профессиональные материалы (Luxio, CND, Kydra, L’Oréal) и конечно стерильный инструмент. 
+
+Ваша красота и здоровье — наш приоритет
+								</p>
+							</div>
+							<a href="#" data-fls-button="" class="blockhead__button button button--icon button--lite button--icon-arrow button--arrow-ru">Прайс-лист</a>
+						</div>				
 					
+					<h3 class="selected-work__title selected-work__header">Мы в социальных сетях</h3>
 
 					<div style="margin-top: 1.3rem;" class="page__skills skills">
 						<div class="skills__container">
@@ -253,355 +367,9 @@
 							</article>
 						</div>
 					</div>
-
-				</section>
-
-				
-
-				<!-- <section class="section page__process process">
-					<div class="process__container">
-						<div data-fls-blockhead="" class="process__blockhead blockhead">
-							<span class="blockhead__label">The Process</span>
-							<h2 class="blockhead__title">
-								Your Website
-								<span>in 5 steps</span>
-							</h2>
-							<div class="blockhead__text">
-								<p>
-									Our process ensures that we create a website tailored to your
-            business needs.
-								</p>
-							</div>
-						</div>
-						<div class="process__items items-process">
-							<div class="items-process__header">
-								<div class="items-process__arrow items-process__arrow--icon-arrow items-process__arrow--arrow-d"></div>
-							</div>
-							<div class="items-process__body">
-								<div class="items-process__item item-process">
-									<article data-fls-item="" class="item-process__body item">
-										<div class="item__time">2 Hours</div>
-										<div class="item__label">Do we Match?</div>
-										<h4 class="item__title">Discovery Call</h4>
-										<div class="item__text">
-											<p>
-												Before we start, we determine if and how I can help you. What
-                  are your requirements for your new website? Why do you need a
-                  new website? What goals do you have, and what problems can we
-                  solve with a new website?
-											</p>
-										</div>
-										<ul class="item__list">
-											<li class="item__item">We get to know each other better</li>
-											<li class="item__item">Determine how I can best assist you</li>
-											<li class="item__item">Understand the goals you have for your website</li>
-										</ul>
-									</article>
-								</div>
-								<div class="items-process__item item-process">
-									<article data-fls-item="" class="item-process__body item">
-										<div class="item__time">1 Week</div>
-										<div class="item__label">lorem ipsum</div>
-										<h4 class="item__title">Concept & Strategy</h4>
-										<div class="item__text">
-											<p>
-												Together, we develop a strategy that successfully combines
-                  your goals with the needs of your target audience. Based on
-                  this concept, I create the first wireframes and an interactive
-                  prototype. This provides us with a very good impression of the
-                  website and the user interface.
-											</p>
-										</div>
-										<ul class="item__list">
-											<li class="item__item">UX Design</li>
-											<li class="item__item">Wireframes</li>
-											<li class="item__item">Interactive Prototype</li>
-										</ul>
-									</article>
-								</div>
-								<div class="items-process__item item-process">
-									<article data-fls-item="" class="item-process__body item">
-										<div class="item__time">1 Week</div>
-										<div class="item__label">Some Magic</div>
-										<h4 class="item__title">Web Design</h4>
-										<div class="item__text">
-											<p>
-												Now comes the magic. Based on the previously developed
-                  concept, I create a high-end screen design perfectly tailored
-                  to your brand. A web design that sets you apart from your
-                  competition, fits your target audience ideally, and provides
-                  an excellent user experience.
-											</p>
-										</div>
-										<ul class="item__list">
-											<li class="item__item">UX Design</li>
-											<li class="item__item">Wireframes</li>
-											<li class="item__item">Interactive Prototype</li>
-										</ul>
-									</article>
-								</div>
-								<div class="items-process__item item-process">
-									<article data-fls-item="" class="item-process__body item">
-										<div class="item__time">2 Weeks</div>
-										<div class="item__label">More Magic</div>
-										<h4 class="item__title">Development</h4>
-										<div class="item__text">
-											<p>
-												In this step, we breathe life into your new high-end design.
-                  You will receive a custom-built website using a modular web
-                  design system and CMS integration. Animations will add the
-                  necessary flair to your site and set you apart from the boring
-                  competition.
-											</p>
-										</div>
-										<ul class="item__list">
-											<li class="item__item">Custom framer website</li>
-											<li class="item__item">Modular web design systems</li>
-											<li class="item__item">CMS integration</li>
-										</ul>
-									</article>
-								</div>
-								<div class="items-process__item item-process">
-									<article data-fls-item="" class="item-process__body item">
-										<div class="item__time">2 Hours</div>
-										<div class="item__label">Ready to go</div>
-										<h4 class="item__title">Website onboarding</h4>
-										<div class="item__text">
-											<p>
-												In a personal Framer workshop, I will show you how to make
-                  changes to your new website quickly and easily. Additionally,
-                  you will receive personalized Framer video tutorials that you
-                  can access at any time. Edit your Framer website without a
-                  complicated backend or the need for an additional programmer.
-                  It's as simple as that.
-											</p>
-										</div>
-										<ul class="item__list">
-											<li class="item__item">Personal workshop</li>
-											<li class="item__item">Personalized video tutorials</li>
-											<li class="item__item">Edit text and images directly on your website</li>
-										</ul>
-									</article>
-								</div>
-							</div>
-						</div>
 					</div>
-				</section> -->
-				<!-- <section class="page__reviews reviews">
-					<div class="reviews__container">
-						<div data-fls-blockhead="" class="reviews__blockhead blockhead">
-							<h2 class="blockhead__title blockhead__title--size-96">
-								What my
-								<span>clients say</span>
-							</h2>
-							<div class="blockhead__text blockhead__text--size-18">
-								<p>
-									See what my clients have to say about working with me and the
-            results I helped them achieve.
-								</p>
-							</div>
-						</div>
-						<div data-fls-masonry="" class="reviews__items">
-							<article data-fls-border="" data-fls-masonry-item="" class="reviews__item item-review">
-								<img src="./assets/img/clients/03.svg" alt="Image" class="item-review__icon">
-								<h4 class="item-review__title">
-									<a href="#" class="item-review__link-title">Amazing Results with Arik’s Premium Web Design Services.</a>
-								</h4>
-								<div class="item-review__text">
-									<p>
-										Arik is a top-notch web designer who created a stunning website
-              for my business. He was attentive to my needs and provided
-              excellent customer service throughout the entire process. I highly
-              recommend his services.
-									</p>
-								</div>
-								<div class="item-review__author author-review">
-									<picture>
-										<img alt="Some avatar" class="author-review__avatar" src="./assets/img/reviews/user-01.webp">
-									</picture>
-									<div class="author-review__body">
-										<div class="author-review__name">John Doe</div>
-										<div class="author-review__company">ABC Company</div>
-									</div>
-								</div>
-							</article>
-							<article data-fls-border="" data-fls-masonry-item="" class="reviews__item item-review">
-								<img src="./assets/img/clients/06.svg" alt="Image" class="item-review__icon">
-								<h4 class="item-review__title">
-									<a href="#" class="item-review__link-title">Expert Webflow and SEO Services: Excellent Work, Great Results.</a>
-								</h4>
-								<div class="item-review__text">
-									<p>
-										Working with Arik on my website redesign was a fantastic
-              experience. He was able to take my vision and turn it into a
-              beautiful and functional website. His attention to detail and
-              creative approach is unmatched. I couldn't be happier with the end
-              result.
-									</p>
-								</div>
-								<div class="item-review__author author-review">
-									<picture>
-										<img alt="Some avatar" class="author-review__avatar" src="./assets/img/reviews/user-02.webp">
-									</picture>
-									<div class="author-review__body">
-										<div class="author-review__name">David Kim</div>
-										<div class="author-review__company">Design Inc.</div>
-									</div>
-								</div>
-							</article>
-							<article data-fls-border="" data-fls-masonry-item="" class="reviews__item item-review">
-								<img src="./assets/img/clients/05.svg" alt="Image" class="item-review__icon">
-								<h4 class="item-review__title">
-									<a href="#" class="item-review__link-title">Amazing Results with Arik’s Premium Web Design Services.</a>
-								</h4>
-								<div class="item-review__text">
-									<p>
-										Arik is a top-notch web designer who created a stunning website
-              for my business. He was attentive to my needs and provided
-              excellent customer service throughout the entire process. I highly
-              recommend his services.
-									</p>
-								</div>
-								<div class="item-review__author author-review">
-									<picture>
-										<img alt="Some avatar" class="author-review__avatar" src="./assets/img/reviews/user-03.webp">
-									</picture>
-									<div class="author-review__body">
-										<div class="author-review__name">John Doe</div>
-										<div class="author-review__company">ABC Company</div>
-									</div>
-								</div>
-							</article>
-							<article data-fls-border="" data-fls-masonry-item="" class="reviews__item item-review">
-								<img src="./assets/img/clients/04.svg" alt="Image" class="item-review__icon">
-								<h4 class="item-review__title">
-									<a href="#" class="item-review__link-title">Expert Webflow and SEO Services: Excellent Work, Great Results.</a>
-								</h4>
-								<div class="item-review__text">
-									<p>
-										Working with Arik on my website redesign was a fantastic
-              experience. He was able to take my vision and turn it into a
-              beautiful and functional website. His attention to detail and
-              creative approach is unmatched. I couldn't be happier with the end
-              result.
-									</p>
-								</div>
-								<div class="item-review__author author-review">
-									<picture>
-										<img alt="Some avatar" class="author-review__avatar" src="./assets/img/reviews/user-04.webp">
-									</picture>
-									<div class="author-review__body">
-										<div class="author-review__name">Andrew Thompson</div>
-										<div class="author-review__company">Silverstone Corporationdiv></div>
-									</div>
-								</div>
-							</article>
-							<article data-fls-border="" data-fls-masonry-item="" class="reviews__item item-review">
-								<img src="./assets/img/clients/02.svg" alt="Image" class="item-review__icon">
-								<h4 class="item-review__title">
-									<a href="#" class="item-review__link-title">Web Design and Content Solutions: Stand Out from the Crowd.</a>
-								</h4>
-								<div class="item-review__text">
-									<p>
-										Arik's SEO services have helped my business improve its online
-              presence and increase traffic to our website. He is knowledgeable,
-              professional, and provides excellent results. I highly recommend
-              him for all your SEO needs.
-									</p>
-								</div>
-								<div class="item-review__author author-review">
-									<picture>
-										<img alt="Some avatar" class="author-review__avatar" src="./assets/img/reviews/user-05.webp">
-									</picture>
-									<div class="author-review__body">
-										<div class="author-review__name">Emily Davis</div>
-										<div class="author-review__company">Greenway Industries</div>
-									</div>
-								</div>
-							</article>
-							<article data-fls-border="" data-fls-masonry-item="" class="reviews__item item-review">
-								<img src="./assets/img/clients/01.svg" alt="Image" class="item-review__icon">
-								<h4 class="item-review__title">
-									<a href="#" class="item-review__link-title">
-										High-Quality Web Design: Exceptional Attention to Detail with
-              Arik.
-									</a>
-								</h4>
-								<div class="item-review__text">
-									<p>
-										Arik's development services are top-notch. He is able to take
-              complex ideas and turn them into functional, user-friendly
-              websites. His attention to detail and commitment to customer
-              satisfaction are unmatched. I highly recommend Arik for all your
-              web development needs.
-									</p>
-								</div>
-								<div class="item-review__author author-review">
-									<picture>
-										<img alt="Some avatar" class="author-review__avatar" src="./assets/img/reviews/user-06.webp">
-									</picture>
-									<div class="author-review__body">
-										<div class="author-review__name">Ryan Chen</div>
-										<div class="author-review__company">Golden Gate Solutions</div>
-									</div>
-								</div>
-							</article>
-						</div>
-					</div>
-				</section> -->
-				<!-- <section class="about-module">
-					<div class="about-module__header">
-						<div class="about-module__picture">
-							<picture>
-								<source media="(max-width: 600px)" srcset="./assets/img/arik-600.webp" type="image/webp">
-								<img class="about-module__image" alt="Arik" src="./assets/img/arik.webp">
-							</picture>
-						</div>
-						<div data-fls-marquee="" data-fls-marquee-speed="200" class="about-module__name name-about">
-							<div class="name-about__item">
-								Arik
-								<span>Andersson</span>
-							</div>
-							<div class="name-about__item">
-								Arik
-								<span>Andersson</span>
-							</div>
-						</div>
-					</div>
-					<div class="about-module__container">
-						<div class="about-module__body">
-							<h4 class="about-module__title">
-								A website that leaves
-								<span>a lasting impression!</span>
-							</h4>
-							<div class="about-module__content">
-								<div class="about-module__text">
-									<p>
-										Hi, I'm Arik Andersson - a freelancer specializing in premium web
-              design, development, and SEO services. I'm passionate about
-              creating unique and effective solutions for my clients, and I
-              bring a personal touch to every project. Let's work together to
-              bring your vision to life!
-									</p>
-								</div>
-								<ul data-fls-social="" class="about-module__social social">
-									<li class="social__item">
-										<a href="#" target="_blank" class="social__link social__link--icon-s-twit"></a>
-									</li>
-									<li class="social__item">
-										<a href="#" target="_blank" class="social__link social__link--icon-s-inst"></a>
-									</li>
-									<li class="social__item">
-										<a href="#" target="_blank" class="social__link social__link--icon-s-drb"></a>
-									</li>
-									<li class="social__item">
-										<a href="#" target="_blank" class="social__link social__link--icon-s-beh"></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section> -->
+					
+				</section>				
 			</main>
 			<!-- @format -->
 			<!-- <aside data-fls-letstalk="" class="lets-talk">
@@ -623,19 +391,24 @@
             stand out.
 								</p>
 							</div>
-							<a href="#" data-fls-button="" class="blockhead__button button button--icon button--lite button--icon-arrow button--arrow-ru">Get in touch</a>
+							<a href="#" data-fls-button="" class="blockhead__button button button--icon button--lite button--icon-arrow button--arrow-ru">Прайс-лист</a>
 						</div>
 					</div>
 				</section>
 			</aside> -->
-			<!-- @format -->
+			
+			 
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__container">
 					<div class="footer__body body-footer">
 						<div class="body-footer__content content-footer">
+
+							<h3 style="color:coral" class="selected-work__title">								
+								<span><a href="#">Ре Валитти</a></span>
+							</h3>
 							
 								<!-- <img src="./assets/img/logo.svg" alt="Logo" class="content-footer__logo"> -->
-								 <a href="#" class="content-footer__link-logo" style="font-size: 2rem; font-weight: 900;">Re Valitti</a>
+								 
 							
 							<ul data-fls-social="" style="color: rgb(81 81 81);" class="content-footer__social social social--text">
 								<li class="social__item">
@@ -653,10 +426,8 @@
 							</ul>
 						</div>
 						<div data-fls-spollers="500" class="body-footer__menus">
-							<details class="body-footer__menu">
-								<summary>
-									<h5 class="body-footer__title">УСЛУГИ</h5>
-								</summary>
+							<div class="body-footer__menu">						
+									<h5 style="color: rgb(177, 108, 5)" class="body-footer__title">УСЛУГИ</h5>							
 								<ul class="body-footer__list">
 									<li class="body-footer__item">
 										<a href="#" class="body-footer__link">Парикмахер-стилист для женщин</a>
@@ -674,14 +445,12 @@
 										<a href="#" class="body-footer__link">Услуги бровиста</a>
 									</li>
 									<li class="body-footer__item" style="padding: 1rem 0;">
-										<a style="background-color: rgb(112, 112, 245);" href="#" data-fls-button="" class="body-footer__button button button--icon button--lite button--icon-arrow button--arrow-ru">Связаться через Телеграм</a>
+										<a href="#" data-fls-button="" class="body-footer__button button button--icon button--lite button--icon-arrow button--arrow-ru">Связаться через Телеграм</a>
 									</li>
 								</ul>
-							</details>
-							<details class="body-footer__menu">
-								<summary>
-									<h5 class="body-footer__title">КОНТАКТЫ</h5>
-								</summary>
+							</div>
+							<div class="body-footer__menu">								
+									<h5 style="color: rgb(177, 108, 5)" class="body-footer__title">КОНТАКТЫ</h5>								
 								<ul class="body-footer__list">
 									<li class="body-footer__item">
 										<a href="#" class="body-footer__link">+7(949) 757-87-27</a>
@@ -689,44 +458,25 @@
 									<li class="body-footer__item">
 										<a href="#" class="body-footer__link">г.Донецк, пр.Илича, 21а</a>
 									</li>
-									<!-- <li class="body-footer__item">
-										<a href="#" class="body-footer__link">Blog</a>
-									</li>
-									<li class="body-footer__item">
-										<a href="#" class="body-footer__link">Blog Post</a>
-									</li> -->
+									
 								</ul>
-							</details>
-							<!-- <details class="body-footer__menu">
-								<summary>
-									<h5 class="body-footer__title">Utility Pages</h5>
-								</summary>
-								<ul class="body-footer__list">
-									<li class="body-footer__item">
-										<a href="#" class="body-footer__link">404 Error Page</a>
-									</li>
-									<li class="body-footer__item">
-										<a href="#" class="body-footer__link">Password Protected</a>
-									</li>
-									<li class="body-footer__item">
-										<a href="#" class="body-footer__link">Styleguide</a>
-									</li>
-									<li class="body-footer__item">
-										<a href="#" class="body-footer__link">Licensing</a>
-									</li>
-									<li class="body-footer__item">
-										<a href="#" class="body-footer__link">Changelog</a>
-									</li>
-								</ul>
-							</details> -->
+							</div>
+							
 						</div>
 					</div>
-					<!-- <div class="footer__bottom bottom-footer">
+					<div class="footer__bottom bottom-footer">
 						<div class="bottom-footer__copy">© 2025</div>
 						<a href="#" data-fls-scrollto="main" data-fls-button="" class="bottom-footer__button button button--text button--text-big button--text-rev button--icon-arrow">To top</a>
-					</div> -->
+					</div>
 				</div>
 			</footer>
 		</div>
+		
+		
+		<script src="js/app.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> -->		
+		<script src="js/vendors.js"></script>
+		<script src="js/scrpt.js"></script>
+		
 	</body>
 </html>
